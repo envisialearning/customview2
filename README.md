@@ -22,8 +22,26 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Set the CV2 URL on:
 
+```ruby
+# config/iniitalizer/customview2.rb
+Customview2.config do |c|
+  c.host = 'https://<customview 2 URL'
+end
+```
+
+Establish a connection 
+
+```ruby
+Customview2.connect(email: <user email>, api_key: <api_key>)
+```
+
+ActiveRecord like functions:
+
+```ruby
+project = Customview2::Project.find(<project_id>)
+```
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
