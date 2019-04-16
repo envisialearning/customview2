@@ -11,11 +11,11 @@ RSpec.describe Customview2 do
       stub_const('ENV', ENV.to_hash.merge({ "#{key}" => "#{value}" }))
     end
 
-    Customview2.config do |c|
-      c.host = ENV["TEST_URL"]
-    end
+    # Customview2.config do |c|
+    #   c.host = ENV["TEST_URL"]
+    # end
 
-    r = Customview2.connect(email: ENV["TEST_EMAIL"], api_key: ENV['TEST_API_KEY'])
+    r = Customview2.connect(email: ENV["TEST_EMAIL"], api_key: ENV['TEST_API_KEY'], url: ENV["TEST_URL"])
         
     expect(Customview2.jwt).not_to be_empty
 
