@@ -44,7 +44,7 @@ Gem::Specification.new do |spec|
 
   
   spec.add_dependency 'her'
-  spec.add_dependency 'faraday', '~> 0.15.4'
-  spec.add_dependency 'faraday_middleware', '~> 0.13.1'
+  spec.add_dependency 'faraday' #, '~> 0.15.4'
+  spec.add_dependency 'faraday_middleware' #, '~> 0.13.1'
   
 end
