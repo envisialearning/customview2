@@ -25,9 +25,9 @@ Or install it yourself as:
 Set the CV2 URL on:
 
 ```ruby
-# config/iniitalizer/customview2.rb
+# config/initializer/customview2.rb
 Customview2.config do |c|
-  c.host = 'https://<customview 2 URL'
+  c.host = 'https://<customview 2 URL>'
 end
 ```
 
