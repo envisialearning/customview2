@@ -12,7 +12,10 @@ module Customview2
       @api ||= Her::API.new    
     end
 
-    def connect(email:, api_key:)
+    def connect(email:, api_key:, url:)
+
+      self.host  = url
+      
       conn = Faraday.new(:url => "#{self.host}") do |c|
         c.request  :url_encoded
         c.response :json
@@ -36,9 +39,9 @@ module Customview2
       end
     end
 
-    def config
-      yield self
-    end
+    # def config
+    #   yield self
+    # end
 
     require 'customview2/project'
   end

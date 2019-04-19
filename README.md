@@ -22,19 +22,10 @@ Or install it yourself as:
 
 ## Usage
 
-Set the CV2 URL on:
-
-```ruby
-# config/initializer/customview2.rb
-Customview2.config do |c|
-  c.host = 'https://<customview 2 URL>'
-end
-```
-
 Establish a connection 
 
 ```ruby
-Customview2.connect(email: <user email>, api_key: <api_key>)
+Customview2.connect(email: <user email>, api_key: <api_key>, url: '<set custom view 2 url here>')
 ```
 
 ActiveRecord like functions:

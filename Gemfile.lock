@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     customview2 (1.0)
-      faraday (~> 0.15.4)
-      faraday_middleware (~> 0.13.1)
+      faraday
+      faraday_middleware
       her
 
 GEM
