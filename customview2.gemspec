@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Aldwin Ibuna"]
   spec.email         = ["aldwin@envisialearning.com"]
 
-  spec.summary       = %q{API interface for CustomVIew 2}
-  spec.description   = %q{API interface for CustomVIew 2}
+  spec.summary       = %q{API interface for CustomView 2}
+  spec.description   = %q{API interface for CustomView 2}
   spec.homepage      = "https://github.com/dwinph/customview2"
   spec.license       = "MIT"
 

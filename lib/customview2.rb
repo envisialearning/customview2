@@ -25,7 +25,7 @@ module Customview2
 
       if self.jwt = response.body["jwt"]
       else
-        raise Customview2::AuthenteicationFailed
+        raise Customview2::AuthenticationFailed
       end
 
       Customview2::api.setup url: self.host do |c|
@@ -43,7 +43,7 @@ module Customview2
     require 'customview2/project'
   end
 
-  class AuthenteicationFailed < StandardError
+  class AuthenticationFailed < StandardError
   
   end
 end
