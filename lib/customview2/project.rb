@@ -12,6 +12,11 @@ module Customview2
         post "/api/v1/projects/#{id}/create_campaign", params
       end
 
+      #needs campaign guid, lists all assessments
+      def get_assessments(id, params = {})
+        get "/api/v1/projects/#{id}/participants", params
+      end
+
       def create_participant(id, params = {})
         post "/api/v1/projects/#{id}/participants", params
       end
