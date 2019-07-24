@@ -2,6 +2,7 @@ require 'her'
 require 'faraday'
 require 'faraday_middleware'
 require "customview2/version"
+require 'customview2/reports'
 
 
 module Customview2

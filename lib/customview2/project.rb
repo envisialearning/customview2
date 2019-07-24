@@ -29,9 +29,6 @@ module Customview2
         get "/api/v1/projects/#{id}/participants/status/#{params[:guid]}", params
       end
 
-      def update_contact_lifetime_value(guid, params = {})
-        #post "/api/v1/contacts/#{guid}/update_contact_lifetime_value", params
-      end
     end
   end
 end
