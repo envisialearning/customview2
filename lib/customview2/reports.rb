@@ -7,7 +7,7 @@ module Customview2
       def get_campaign_report(authentication={}, id=nil, params = {})
         host  = authentication[:url]
         
-        conn = Faraday.new(:url => "#{host}") do |c|
+        conn = Faraday.new(:url => "#{host}", request: {open_timeout: 20, timeout: 20}) do |c|
           c.request  :url_encoded
           c.response :json
           c.adapter  Faraday.default_adapter
