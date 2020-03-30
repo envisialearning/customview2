@@ -29,6 +29,10 @@ module Customview2
         get "/api/v1/projects/#{id}/participants/status/#{params[:guid]}", params
       end
 
+      def get_report_data(id, params = {})
+        get "/api/v1/projects/#{id}/participants/report_data/#{params[:guid]}", params
+      end
+
     end
   end
 end
