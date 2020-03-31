@@ -33,6 +33,11 @@ module Customview2
         get "/api/v1/projects/#{id}/participants/report_data/#{params[:guid]}", params
       end
 
+      #
+      def generate_otp(id, params = {})
+        get "/api/v1/projects/#{id}/participants/authorize/#{params[:guid]}", params
+      end
+
     end
   end
 end
