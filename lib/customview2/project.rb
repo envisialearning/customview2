@@ -38,6 +38,10 @@ module Customview2
         get "/api/v1/projects/#{id}/participants/authorize/#{params[:guid]}", params
       end
 
+      def get_status(id, params = {})
+        post "/api/v1/projects/#{id}/status", params
+      end
+
     end
   end
 end
