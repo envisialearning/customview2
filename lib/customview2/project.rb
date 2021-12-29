@@ -42,6 +42,25 @@ module Customview2
         post "/api/v1/projects/#{id}/status", params
       end
 
+      #using V2
+      def get_clients()
+        get "/api/v2/clients"
+      end
+
+      def get_campaigns(client_id)
+        get "/api/v2/projects/list", {client_id: client_id}
+      end
+
+      #needs campaign guid, lists all assessments/participants with flags for invoicing
+      def get_participants(id, params = {})
+        get "/api/v2/projects/#{id}/participants", params
+      end
+
+      #needs campaign guid, lists all assessments/participants with flags for invoicing
+      def get_assessment_status(id, params = {})
+        get "/api/v2/projects/#{id}/participants/status/#{params[:guid]}", params
+      end
+
     end
   end
 end
