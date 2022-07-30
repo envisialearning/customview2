@@ -65,6 +65,14 @@ module Customview2
         get "/api/v2/projects/#{id}/participants/report_scores/#{params[:guid]}", params
       end
 
+      def get_project_demographics(id, params = {})
+        get "/api/v2/projects/#{id}/demographics", params
+      end
+
+      def get_demographics(id, params = {})
+        get "/api/v2/projects/#{id}/participants/demographics/#{params[:guid]}", params
+      end
+
     end
   end
 end
