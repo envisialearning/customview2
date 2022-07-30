@@ -39,7 +39,7 @@ module Customview2
       end
 
       def get_status(id, params = {})
-        post "/api/v1/projects/#{id}/status", params
+        post "/api/v2/projects/#{id}/status", params
       end
 
       #using V2
@@ -59,6 +59,18 @@ module Customview2
       #needs campaign guid, lists all assessments/participants with flags for invoicing
       def get_assessment_status(id, params = {})
         get "/api/v2/projects/#{id}/participants/status/#{params[:guid]}", params
+      end
+
+      def get_report_scores(id, params = {})
+        get "/api/v2/projects/#{id}/participants/report_scores/#{params[:guid]}", params
+      end
+
+      def get_project_demographics(id, params = {})
+        get "/api/v2/projects/#{id}/demographics", params
+      end
+
+      def get_demographics(id, params = {})
+        get "/api/v2/projects/#{id}/participants/demographics/#{params[:guid]}", params
       end
 
     end
