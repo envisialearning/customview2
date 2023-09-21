@@ -79,6 +79,12 @@ module Customview2
         get "/api/v2/projects/#{id}/participants/report_links/#{params[:guid]}", params
       end
 
+      #needs campaign guid, lists all reports with links, or you can pass a report_guid to get the link
+      def get_assessment_links(id, params = {})
+        use_api Customview2.api
+        get "/api/v2/projects/#{id}/participants/assessment_links/#{params[:guid]}", params
+      end
+
     end
   end
 end
