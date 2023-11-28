@@ -73,6 +73,10 @@ module Customview2
         get "/api/v2/projects/#{id}/participants/demographics/#{params[:guid]}", params
       end
 
+      def get_tool_info(id, params = {})
+        get "/api/v2/projects/#{id}/tool_info", params
+      end
+
       #needs campaign guid, lists all reports with links, or you can pass a report_guid to get the link
       def get_report_links(id, params = {})
         use_api Customview2.api
